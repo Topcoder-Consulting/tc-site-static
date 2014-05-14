@@ -3,7 +3,9 @@
 window.tc = angular.module('tc', [
   'restangular',
   'tc.challengeService',
-  'ngGrid'
+  'ngGrid',
+  'darthwade.dwLoading',
+  'chieffancypants.loadingBar'
 ])
 
 .constant("API_URL", "https://api.topcoder.com/v2")

@@ -1,9 +1,13 @@
 'use strict';
 
-tc.controller('ChallengeListingCtrl', ['$scope', 'Challenge',
-  function($scope, Challenge) {
+tc.controller('ChallengeListingCtrl', ['$scope', '$loading', 'Challenge',
+  function($scope, $loading, Challenge) {
 
   $scope.challenges = [];
+
+  $scope.loadingOptions = {
+    text: 'Loading Challenges'
+  };
 
   // @TODO this should be dynamic per type
   $scope.gridOptions = {
@@ -41,8 +45,11 @@ tc.controller('ChallengeListingCtrl', ['$scope', 'Challenge',
     ]
   };
 
+  $loading.start('challenges');
+
   // @TODO make type dynamic by using $routeparams
   Challenge.all('active').getList({type: 'design'}).then(function(challenges) {
     $scope.challenges = challenges;
+    //$loading.finish('challenges');
   });
 }]);
