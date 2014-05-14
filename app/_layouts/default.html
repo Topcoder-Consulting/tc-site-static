@@ -8,10 +8,12 @@
 
         <!-- build:css({app,.tmp}) /css/main.css -->
         <!-- Syntax highlighting CSS -->
+        <link rel="stylesheet" href="/_bower_components/ng-grid/ng-grid.min.css">
+        <link rel="stylesheet" href="/_bower_components/angular-loading/angular-loading.css">
         <link rel="stylesheet" href="/css/syntax.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/style.css">
         <!-- endbuild -->
 
     </head>
@@ -41,8 +43,20 @@
           </div>
         </div>
 
+
     <!-- build:js(app) /js/scripts.js -->
-    <script src="/js/main.js"></script>
+    <script src="/_bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/_bower_components/angular/angular.min.js"></script>
+    <script src="/_bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/_bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="/_bower_components/restangular/dist/restangular.min.js"></script>
+    <script src="/_bower_components/ng-grid/build/ng-grid.min.js"></script>
+    <script src="/_bower_components/spin.js/spin.js"></script>
+    <script src="/_bower_components/spin.js/jquery.spin.js"></script>
+    <script src="/_bower_components/angular-loading/angular-loading.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/challenges/services/challengeService.js"></script>
+    <script src="/js/challenges/controllers/challengeListingCtrl.js"></script>
     <!-- endbuild -->
     </body>
 </html>
